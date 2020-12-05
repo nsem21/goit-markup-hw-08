@@ -1,0 +1,19 @@
+.logo {
+    color: $second-color;
+  
+    text-decoration: none;
+    font-family: $special-font, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: $space-measure;
+  
+    /*margin-right: 93px;*/
+
+    &--under {
+        color: $first-color;
+    }
+}
+.logo_accent {
+    color: $accent-color;
+}

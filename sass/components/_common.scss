@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $main-font, sans-serif;
+    font-size: 14px;
+    color: $third-color;
+}
+img {
+    display: block;
+}
+/*Обнуление стилей списков*/
+.list,
+.nav,
+.contact-list,
+.values,
+.activities-list,
+.team,
+.social-net,
+.client-base,
+.impressum,
+.button-list,
+.gallery {
+    @extend %style-reset;
+    @extend %list-reset;
+}
+
+/*Обнуление стилей заголовков и параграфов*/
+.banner_title,
+.section_title,
+.value_title,
+.value_descr,
+.activity_title,
+.member_name,
+.member_position,
+.join,
+.work_title,
+.work_type,
+.modal_title {
+    @extend %style-reset;
+}
+
+/*Основная кнопка */
+.main-button {
+    display: inline-block;
+  
+    background-color: $accent-color;
+    width: 200px;
+    height: 50px;
+  
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    color: $first-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    &--subscription {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+}
+
+/*Оформление секции*/
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    &--diferent {
+        background-color: #f5f4fa;
+    }
+
+    &--activities {
+        display: none;
+    }
+}
+.section_title {
+    color: $second-color;
+  
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: $space-measure;
+  
+    margin-bottom: 30px;
+}
+/*Визуально спрятан елемент*/
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
