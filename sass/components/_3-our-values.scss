@@ -1,13 +1,27 @@
 /*.values-section {
     padding-top: 94px;
-}
-.values {
-    display: flex;
-    justify-content: space-between;
 }*/
+.values {
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        /*justify-content: space-between;*/
+        flex-wrap: wrap;
+    }
+    
+}
+.value {
+    @media screen and (min-width:$tablet) {
+        width: 354px;
+    }
 
+}
 .value:not(:last-child) {
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+}
+.value:nth-child(2n+1){
+    @media screen and (min-width:$tablet) {
+        margin-right: 30px;
+    }
 }
 
 .value_img {
@@ -37,6 +51,9 @@
     text-transform: uppercase;
   
     margin-bottom: 10px;
+    @media screen and (min-width:$tablet) {
+        text-align: left;
+    }
 }
 .value_descr {
     font-weight: 400;

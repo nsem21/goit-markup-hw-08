@@ -5,8 +5,23 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.container--footer {
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+           
+    }
+}
 .impressum-block {
     text-align: center;
+
+    @media screen and (min-width:$tablet) {
+        width: 50%;
+           
+    }
 }
 .impressum {
     color: $first-color;
@@ -44,6 +59,13 @@ footer {
     margin-top: 60px;
 
     text-align: center;
+
+    @media screen and (min-width:$tablet) {
+        width: 50%;
+
+        margin-top: 0;
+           
+    }
 }
 
 .join {
@@ -56,6 +78,13 @@ footer {
   
     margin-bottom: 20px;
     padding-top: 12px;
+
+    @media screen and (min-width:$tablet) {
+        padding-top: 5px;
+           
+    }
+
+    
 }
 
 .subscribe-block {

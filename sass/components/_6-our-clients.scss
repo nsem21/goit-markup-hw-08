@@ -1,6 +1,12 @@
 .client-base {
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (min-width:$tablet) {
+        margin-right: -30px;
+        margin-bottom: -30px;
+           
+    }
 }
 .client {
     display: flex;
@@ -16,14 +22,14 @@
   
     transition: $change-function;
 
-    
-    &:nth-child(2n+1) {
+    @media screen and (min-width:$tablet) {
+        width: 226px;
         margin-right: 30px;
-    }
-    &:not(:nth-last-child(-n+2)) {
         margin-bottom: 30px;
+           
     }
 
+    
     &:hover,
     &:focus {
         border: 1px solid $accent-color;
@@ -38,7 +44,18 @@
     
         transition: $change-function;
     }
+
 }
+@media screen and (max-width:$pre-tablet) {
+    .client:nth-child(2n+1) {
+        margin-right: 30px;
+    }
+    
+    .client:not(:nth-last-child(-n+2)) {
+        margin-bottom: 30px;
+    }   
+}
+
 
 .client_logo {
     fill: $svg-pic-color;

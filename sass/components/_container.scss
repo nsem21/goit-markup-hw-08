@@ -18,5 +18,9 @@
         width: 768px;
        
     }
+    @media screen and (min-width:$desktop) {
+        width: 1200px;
+       
+    }
     
 }
