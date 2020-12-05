@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $main-font, sans-serif;
+    font-size: 14px;
+    color: $third-color;
+}
+img {
+    display: block;
+}
+/*Визуально спрятан елемент*/
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+/*Оформление контейнеров общие стили*/
+.head-container,
+.banner,
+.container {
+    @extend %container;
+
+    &--footer {
+        display: flex;
+    }
+}
+/*Оформление логотипа*/
+.logo {
+    color: $second-color;
+  
+    text-decoration: none;
+    font-family: $special-font, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: $space-measure;
+  
+    margin-right: 93px;
+
+    &--under {
+        color: $first-color;
+    }
+}
+.logo_accent {
+    color: $accent-color;
+}
+/*Обнуление стилей списков*/
+.list,
+.nav,
+.contact-list,
+.values,
+.activities-list,
+.team,
+.social-net,
+.client-base,
+.impressum,
+.button-list,
+.gallery {
+    @extend %style-reset;
+    @extend %list-reset;
+}
+
+/*Обнуление стилей заголовков и параграфов*/
+.banner_title,
+.section_title,
+.value_title,
+.value_descr,
+.activity_title,
+.member_name,
+.member_position,
+.join,
+.work_title,
+.work_type,
+.modal_title {
+    @extend %style-reset;
+}
+
+/*Основная кнопка */
+.main-button {
+    display: inline-block;
+  
+    background-color: $accent-color;
+    width: 200px;
+    height: 50px;
+  
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    color: $first-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    &--subscription {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+}
+/*Оформление секции*/
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--diferent {
+        background-color: #f5f4fa;
+    }
+}
+.section_title {
+    color: $second-color;
+  
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: $space-measure;
+  
+    margin-bottom: 50px;
+}
+
+
+

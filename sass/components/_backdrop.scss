@@ -1,0 +1,334 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+  
+    transition: $change-function;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(+100%);
+    transition: $change-function;
+  
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 528px;
+    height: 581px;
+  
+    padding: 40px;
+  
+    background-color: $first-color;
+  
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  
+    width: 30px;
+    height: 30px;
+  
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  
+    background-color: $first-color;
+  
+    transition: $change-function;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    
+        border: 1px solid $accent-color;
+    
+        transition: $change-function;
+    }
+}
+ 
+.close-button:hover .close-button_icon,
+.close-button:focus .close-button_icon {
+    fill: $accent-color;
+  
+    transition: $change-function;
+}
+  
+.close-button_icon {
+    width: 11px;
+    height: 11px;
+}
+
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: $space-measure;
+
+    color: $second-color;
+}
+  
+/* Форма: оформление*/
+
+.modal_form {
+    width: 100%;
+     
+    margin-top: 30px;
+}
+/*  Оформление инпутов с сдвигом название поля вверх*/
+.label,
+.comment,
+.datapolicy {
+    position: relative;
+  
+    display: block;
+  
+    width: 100%;
+  
+    margin-bottom: 28px;
+}
+.label:hover .input-icon,
+.label:focus .input-icon,
+.user-data:not(:placeholder-shown) ~ .input-icon {
+    fill: $accent-color;
+  
+    transition: $change-function;
+}
+
+.label:hover .input-icon,
+.label:focus .input-icon {
+    cursor: pointer;
+}
+
+.input-icon {
+    position: absolute;
+  
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  
+    width: 18px;
+    height: 18px;
+}
+
+.user-data {
+    width: 100%;
+    height: 40px;
+    padding: 12px 12px 12px 42px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    /*outline: none;*/
+    
+    transition: $change-function;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $accent-color;
+    
+        transition: $change-function;
+    
+        cursor: pointer;
+    }
+}
+ 
+.label-descr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 42px;
+    transition: $change-function;
+  
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  
+    color: $third-color;
+}
+
+/*Сдвиг названия поля вверх*/
+
+.label--user-name:hover .label-descr,
+.label--user-name:focus .label-descr,
+.label--user-name > .user-data:not(:placeholder-shown) + .label-descr {
+    transform: translate(-90%, -250%);
+  
+    color: $accent-color;
+  
+    transition: $change-function;
+  }
+.label--user-tel:hover .label-descr,
+.label--user-tel:focus .label-descr,
+.label--user-tel > .user-data:not(:placeholder-shown) + .label-descr {
+    transform: translate(-50%, -250%);
+  
+    color: $accent-color;
+  
+    transition: $change-function;
+}
+
+.label--user-email:hover .label-descr,
+.label--user-email:focus .label-descr,
+.label--user-email > .user-data:not(:placeholder-shown) + .label-descr {
+    transform: translate(-60%, -250%);
+  
+    color: $accent-color;
+  
+    transition: $change-function;
+}
+  /* Коментарии*/
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment_field {
+    resize: none;
+  
+    width: 100%;
+    height: 120px;
+  
+    padding: 12px 16px 12px 16px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    outline: none;
+  
+    transition: $change-function;
+}
+
+.comment_descr {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+.comment:hover .comment_field,
+.comment:focus .comment_field {
+    border: 1px solid $accent-color;
+  
+    transition: $change-function;
+  
+    cursor: pointer;
+}
+/*Сдвиг название поля вверх*/
+.comment:hover .comment_descr,
+.comment:focus .comment_descr,
+.comment_field:not(:placeholder-shown) + .comment_descr {
+    transform: translateY(-200%);
+  
+    color: $accent-color;
+  
+    transition: $change-function;
+}
+/*Чэкбокс по персональным данным*/
+/*Стандартный чэкбокс скрыт*/
+.datapolicy_check {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.datapolicy {
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+  
+    margin-bottom: 30px;
+    /*Высота задана так, как елементы содержания имеют position absolute*/
+    height: 24px;
+}
+
+.datapolicy_consent {
+    position: absolute;
+    left: 36.38px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    /*align-items: center;*/
+  
+    margin: 0;
+    padding: 0;
+  
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: $space-measure;
+    color: $third-color;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -24px;
+      
+        align-items: center;
+      
+        width: 16px;
+        height: 15px;
+      
+        display: block;
+        border-radius: 2px;
+      
+        background-color: transparent;
+        background-image: url(../image/uncheck-icon.svg);
+        background-size: contain;
+      
+        cursor: pointer;
+    }
+}
+
+
+.datapolicy_check:checked ~ .datapolicy_consent::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+  
+    align-items: center;
+  
+    width: 16px;
+    height: 15px;
+  
+    display: block;
+    border-radius: 2px;
+  
+    background-image: url(../image/checkbox.svg);
+    background-size: contain;
+    background-color: $accent-color;
+}
+  
+.datapolicy_link {
+    color: $accent-color;
+}
+
+.main-button--send {
+    margin-left: 28%;
+}
+  

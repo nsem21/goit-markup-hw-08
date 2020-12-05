@@ -1,0 +1,21 @@
+.page-current {
+    color: $accent-color;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        display: block;
+    
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        background-color: $accent-color;
+    
+        border-radius: 2px;
+    
+        width: 100%;
+        height: 4px;
+    }
+}
+

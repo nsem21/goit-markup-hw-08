@@ -1,0 +1,36 @@
+.hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1600px 600px;
+  
+    padding-top: 200px;
+    padding-bottom: 200px;
+  
+    
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner_title {
+    color: $first-color;
+  
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;  
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+  
+    margin-bottom: 30px;
+}
+
+  

@@ -1,0 +1,45 @@
+.values-section {
+    padding-top: 94px;
+}
+.values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.value {
+    width: 270px;
+}
+
+.value_img {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  
+    margin-bottom: 30px;
+}
+
+.value_icon {
+    width: 70px;
+    height: 70px;
+}
+
+.value_title {
+    color: $second-color;
+  
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: $space-measure;
+    text-transform: uppercase;
+  
+    margin-bottom: 10px;
+}
+.value_descr {
+    font-weight: 400;
+    line-height: 1.7;
+  
+    letter-spacing: $space-measure;
+}
