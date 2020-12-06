@@ -6,21 +6,32 @@ footer {
     padding-bottom: 60px;
 }
 .container--footer {
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$tablet) and (max-width:$pre-desktop) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        
-        
-           
+        justify-content: center;              
+    }
+       
+    @media screen and (min-width:$desktop){
+       display: flex;
+       flex-direction: row;
+       align-items: baseline;
+       justify-content: space-between;
     }
 }
 .impressum-block {
     text-align: center;
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$tablet) and (max-width:$pre-desktop) {
         width: 50%;
            
+    }
+
+       
+    @media screen and (min-width:$desktop){
+        text-align: left;
+
+      
     }
 }
 .impressum {
@@ -60,11 +71,17 @@ footer {
 
     text-align: center;
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$tablet) and (max-width:$pre-desktop) {
         width: 50%;
 
         margin-top: 0;
-           
+          
+    }
+       
+    @media screen and (min-width:$desktop){
+        text-align: left;
+        margin-top:0;
+       
     }
 }
 
@@ -93,9 +110,12 @@ footer {
     align-items: center;
     flex-direction: column;*/
  
-    margin-top: 60px;
+    @media screen and (max-width:$pre-desktop) {
+        margin-top: 60px;
 
-    text-align: center;
+        text-align: center;
+
+    }
 }
 .form-footter {
     display: flex;
@@ -103,6 +123,10 @@ footer {
     flex-direction: column;
   
     margin-top: 20px;
+
+    @media screen and (min-width:$desktop) {
+        flex-direction: row;
+    }
     
 }
 .subscribe-mail {
@@ -125,6 +149,12 @@ footer {
     line-height: 1.25;
     letter-spacing: $space-measure;
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width:$desktop) {
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+
 }
 .subscribe_icon {
     display: inline-block;

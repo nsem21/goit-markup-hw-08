@@ -134,12 +134,12 @@
     @media screen and (max-width:$pre-tablet) {
         margin-bottom: 16px;
     } 
-    @media screen and (min-width:$tablet) and (max-width:$pre-desktop){
+    @media screen and (max-width:$pre-desktop){
         margin-bottom: 10px;
               
     }
     @media screen and (min-width:$desktop){
-        margin-right: 50px;             
+        margin-right: 30px;             
     }
       
 }

@@ -106,8 +106,17 @@ img {
   background-color: #f5f4fa;
 }
 
-.section--activities {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section--activities {
+    display: none;
+  }
 }
 
 .section_title {
@@ -118,6 +127,12 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section_title {
+    margin-bottom: 50px;
+  }
 }
 
 /*Визуально спрятан елемент*/
@@ -412,7 +427,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .contact-list_item:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -420,7 +435,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .contact-list_item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 30px;
   }
 }
 
@@ -551,10 +566,10 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .value {
     margin-bottom: 0%;
-    margin-right: 30px;
+    width: 270px;
   }
 }
 
@@ -562,7 +577,13 @@ img {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .value:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .value:nth-child(2n+1) {
     margin-right: 30px;
   }
@@ -611,12 +632,51 @@ img {
   letter-spacing: 0.03em;
 }
 
-.team {
-  margin-bottom: -60px;
-  /*justify-content: space-between;*/
+.activities-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+.activity {
+  position: relative;
+}
+
+.activity_overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.activity_title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.team {
+  margin-bottom: -60px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -625,6 +685,18 @@ img {
         flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
   }
 }
 
@@ -642,6 +714,12 @@ img {
     width: 354px;
     margin-right: 30px;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .member {
+    width: 270px;
   }
 }
 
@@ -673,10 +751,18 @@ img {
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .client-base {
     margin-right: -30px;
     margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-base {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -698,11 +784,17 @@ img {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .client {
     width: 226px;
     margin-right: 30px;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client {
+    width: 170px;
   }
 }
 
@@ -772,7 +864,7 @@ footer {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container--footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -785,13 +877,37 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container--footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .impressum-block {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .impressum-block {
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .impressum-block {
+    text-align: left;
   }
 }
 
@@ -828,9 +944,16 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .corp-soc-net-block {
     width: 50%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .corp-soc-net-block {
+    text-align: left;
     margin-top: 0;
   }
 }
@@ -856,8 +979,13 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;*/
-  margin-top: 60px;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-block {
+    margin-top: 60px;
+    text-align: center;
+  }
 }
 
 .form-footter {
@@ -872,6 +1000,15 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-footter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .subscribe-mail {
@@ -891,6 +1028,13 @@ footer {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-mail {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe_icon {

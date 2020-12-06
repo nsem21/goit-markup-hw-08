@@ -1,6 +1,7 @@
 .values-section {
     @media screen and (min-width:$desktop) {
         padding-top: 94px;
+
        
     }
     
@@ -13,7 +14,7 @@
     }
     @media screen and (min-width:$desktop) {
         flex-wrap: nowrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     
     
@@ -21,12 +22,11 @@
 .value {
     @media screen and (min-width:$tablet) {
         width: 354px;
-    @media screen and (min-width:$desktop) {
-            margin-bottom: 0%;
-            width: 270px;
-        }
     }
-
+    @media screen and (min-width:$desktop) {
+        margin-bottom: 0%;
+        width: 270px;
+    }
 }
 .value:not(:last-child) {
     margin-bottom: 30px;
@@ -34,7 +34,7 @@
         margin-right: 30px;
     }
 }
-}
+
 .value:nth-child(2n+1){
     @media screen and (min-width:$tablet) and (max-width:$pre-desktop) {
         margin-right: 30px;

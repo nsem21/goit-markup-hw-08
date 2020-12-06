@@ -86,9 +86,15 @@ img {
     &--diferent {
         background-color: #f5f4fa;
     }
-
+    @media screen and (min-width:$desktop){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
     &--activities {
-        display: none;
+        @media screen and (max-width: $pre-desktop){
+            display: none;
+        }
+      
     }
 }
 .section_title {
@@ -101,6 +107,9 @@ img {
     letter-spacing: $space-measure;
   
     margin-bottom: 30px;
+    @media screen and (min-width:$desktop){
+        margin-bottom: 50px;
+    }
 }
 /*Визуально спрятан елемент*/
 .visually-hidden {
