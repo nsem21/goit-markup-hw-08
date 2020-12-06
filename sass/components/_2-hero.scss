@@ -1,18 +1,68 @@
 .hero {
-    background-color: aqua;
-   background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../image/banner.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mob/mob-banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    /*
-    background-size: 1600px 600px;
+
+    background-size: 480px 400px;
+   
   
-    padding-top: 200px;
-    padding-bottom: 200px;*/
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mob/mob-banner@2x.jpg);
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/mob/mob-banner@3x.jpg);
+    }
+
+    @media screen and (min-width: $desktop){
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/desktop/desktop-banner.jpg);
+
+        background-size: 1600px 600px;
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/desktop/desktop-banner@2x.jpg);
+        }
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+            background-image: linear-gradient(
+              to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)
+            ),
+            url(../image/desktop/desktop-banner@3x.jpg);
+        }   
+    }
+
+    @media screen and (min-width: $tablet) and (max-width:$pre-desktop){
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tablet/tablet-banner.jpg);
+
+        background-size: 768px 400px;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tablet/tablet-banner@2x.jpg);
+        }
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/tablet/tablet-banner@3x.jpg);
+        }  
+         
+    }
+  
   
     
 }
