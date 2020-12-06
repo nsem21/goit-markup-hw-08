@@ -556,14 +556,11 @@ header {
 
 .hero {
   background-color: aqua;
-  /* background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../image/banner.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/banner.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /*
     background-size: 1600px 600px;
   
     padding-top: 200px;
@@ -1449,8 +1446,6 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /*padding-right: 295px;
-      padding-left: 295px;*/
   margin-bottom: 40px;
 }
 
@@ -1461,18 +1456,30 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-right: 63px;
-    padding-left: 64px;
+    padding-right: 48px;
+    padding-left: 49px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
+  .button-list {
+    padding-right: 280px;
+    padding-left: 280px;
+  }
+}
+
+.button-list_item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
   .button-list_item:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 0;
   }
 }
 
 .button {
+  height: 38px;
   padding: 6px 22px;
   background-color: #f5f4fa;
   color: #212121;
@@ -1501,33 +1508,8 @@ footer {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.work {
-  /*width: calc(100% / 3-20px);*/
-  /*background-color: teal;*/
-}
-
-.work:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .work {
-    width: 354px;
-    background-color: teal;
-  }
-}
-
-.work:hover, .work:focus {
+.work:hover,
+.work:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -1535,9 +1517,31 @@ footer {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .work:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .work:not(:nth-child(2n)) {
-    margin-right: 30px;
+  .work {
+    width: 354px;
+    margin-bottom: 0;
+    margin: 15px;
+  }
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work {
+    width: 370px;
   }
 }
 

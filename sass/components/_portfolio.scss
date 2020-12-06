@@ -4,26 +4,29 @@
 .button-list {
     display: flex;
     flex-wrap: wrap;
-  
-    /*padding-right: 295px;
-      padding-left: 295px;*/
 
     margin-bottom: 40px;
     @media screen and (min-width:$tablet) {
         flex-wrap: nowrap;
         justify-content: space-between;
             
-        padding-right: 63px;
-        padding-left: 64px;
+        padding-right: 48px;
+        padding-left: 49px;
            
+    }
+    @media screen and (min-width:$desktop) {
+        padding-right: 280px;
+        padding-left: 280px;  
     }
 }
 .button-list_item:not(:last-child) {
-    @media screen and (max-width:$pre-tablet) {
-        margin-right: 8px;
+    margin-right: 8px;
+    @media screen and (min-width:$tablet) {
+        margin-right:0;
     }
 }
 .button {
+    height: 38px;
     padding: 6px 22px;
     
     
@@ -60,44 +63,41 @@
       transition:  $change-function;
     }
 }
-.gallery{
-    @media screen and (min-width:$tablet) {
+
+.work:hover,
+.work:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+
+    transition:  $change-function;
+}
+@media screen and (max-width:$pre-tablet){
+    .work:not(:last-child) {
+            margin-bottom: 30px;
+    }
+}
+@media screen and (min-width:$tablet) {
+    .work {
+        width: 354px;
+        margin-bottom: 0;
+
+        margin: 15px;
+       
+    }
+    .gallery{
         display: flex;
         flex-wrap: wrap;
-        
-    }
-    
 
-}
-.work {
-    /*width: calc(100% / 3-20px);*/
-  
-    /*background-color: teal;*/
-    
-
-    &:not(:last-child) {
-        margin-bottom: 30px;
-    }
-    @media screen and (min-width:$tablet) {
-        width: 354px;
-        
-        background-color: teal;
-    }
-
-    &:hover,
-    &:focus {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-        cursor: pointer;
-    
-        transition:  $change-function;
+        margin: - 15px;
+      
     }
 }
-.work:not(:nth-child(2n)) {
-    @media screen and (min-width:$tablet) {
-       
-        margin-right: 30px;
+@media screen and (min-width:$desktop) {
+    .work {
+        width: 370px;
     }
+    
 }
 .work_link {
     text-decoration: none;

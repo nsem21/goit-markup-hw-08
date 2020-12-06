@@ -134,6 +134,7 @@
         <ul class="activities-list">
           <li class="activity">
             <img
+              srcset="./image/desktop/tablet.jpg 1x, ./image/desktop/tablet@2x.jpg 2x, ./image/desktop/tablet@3x.jpg 3x, "
               src="./image/img_1.jpg"
               alt="Компьютерное приложение"
               width="370"
@@ -145,6 +146,7 @@
           </li>
           <li class="activity">
             <img
+            srcset="./image/desktop/desktop.jpg 1x, ./image/desktop/desktop@2x.jpg 2x, ./image/desktop/desktop@3x.jpg 3x, "
               src="./image/img_2.jpg"
               alt="Приложение для смартфона"
               width="370"
@@ -156,6 +158,7 @@
           </li>
           <li class="activity">
             <img
+              srcset="./image/desktop/hexagon.jpg 1x, ./image/desktop/hexagon@2x.jpg 2x, ./image/desktop/hexagon@3x.jpg 3x, "
               src="./image/img_3.jpg"
               alt="Приложение для планшета"
               width="370"
@@ -173,12 +176,17 @@
         <h2 class="section_title">Наша команда</h2>
         <ul class="team">
           <li class="member">
-            <img
-              srcset="./image/mob/img_pr_design.jpg 1x, ./image/mob/img_pr_design@2x.jpg 2x, ./image/mob/img_pr_design@3x.jpg 3x"
-              src="./image/mob/img_pr_design.jpg"
-              alt="Фото Игоря Демьяненко"
-              width="450"
-            />
+            <picture>
+              <source srcset="./image/mob/img_pr_design.jpg 1x, ./image/mob/img_pr_design@2x.jpg 2x, ./image/mob/img_pr_design@3x.jpg 3x" media="(max-width: 767px)"/>
+              <source srcset="./image/desktop/img_pr_design.jpg 1x, ./image/desktop/img_pr_design@2x.jpg 2x, ./image/desktop/img_pr_design@3x.jpg 3x" media="(min-width: 1200px)"/>
+              <source srcset="./image/mob/img_pr_design.jpg 1x, ./image/mob/img_pr_design@2x.jpg 2x, ./image/mob/img_pr_design@3x.jpg 3x" media="(max-width: 767px)"/>
+              <img
+                src="./image/mob/img_pr_design.jpg"
+                alt="Фото Игоря Демьяненко"
+              />
+
+            </picture>
+            
             <h3 class="member_name">Игорь Демьяненко</h3>
             <p lang="en" class="member_position">Designer</p>
             <ul class="social-net">
@@ -212,13 +220,17 @@
               </li>
             </ul>
           </li>
-          <li class="member"> 
-            <img
-              srcset="./image/mob/img_develop.jpg 1x, ./image/mob/img_develop@2x.jpg 2x, ./image/mob/img_develop@3x.jpg 3x"
-              src="./image/mob/img_develop.jpg"
-              alt="Фото Ольги Репиной"
-              width="450"
-            />
+          <li class="member">
+            <picture>
+              <source srcset="./image/mob/img_develop.jpg 1x, ./image/mob/img_develop@2x.jpg 2x, ./image/mob/img_develop@3x.jpg 3x" media="(max-width: 767px)"/>
+              <source srcset="./image/desktop/img_develop.jpg 1x, ./image/desktop/img_develop@2x.jpg 2x, ./image/desktop/img_develop@3x.jpg 3x" media="(min-width: 1200px)"/>
+              <source srcset="./image/mob/img_develop.jpg 1x, ./image/mob/img_develop@2x.jpg 2x, ./image/mob/img_develop@3x.jpg 3x" media="(max-width: 767px)"/>
+              <img
+                src="./image/mob/img_develop.jpg"
+                alt="Фото Ольги Репиной"                
+              />
+
+            </picture> 
             <h3 class="member_name">Ольга Репина</h3>
             <p lang="en" class="member_position">Frontend Developer</p>
             <ul class="social-net">
@@ -253,12 +265,18 @@
             </ul>
           </li>
           <li class="member">
-            <img
-              srcset="./image/mob/img_market.jpg 1x, ./image/mob/img_market@2x.jpg 2x, ./image/mob/img_market@3x.jpg 3x"
-              src="./image/mob/img_market.jpg"
-              alt="Фото Николая Тарасова"
-              width="450"
-            />
+            <picture>
+              <source srcset="./image/mob/img_market.jpg 1x, ./image/mob/img_market@2x.jpg 2x, ./image/mob/img_market@3x.jpg 3x" media="(max-width: 767px)"/>
+              <source srcset="./image/desktop/img_market.jpg 1x, ./image/desktop/img_market@2x.jpg 2x, ./image/desktop/img_market@3x.jpg 3x" media="(min-width: 1200px)"/>
+              <source srcset="./image/mob/img_market.jpg 1x, ./image/mob/img_market@2x.jpg 2x, ./image/mob/img_market@3x.jpg 3x" media="(max-width: 767px)"/>
+              <img
+                src="./image/mob/img_market.jpg"
+                alt="Фото Николая Тарасова"
+                
+              />
+
+            </picture> 
+            
             <h3 class="member_name">Николай Тарасов</h3>
             <p lang="en" class="member_position">Marketing</p>
             <ul class="social-net">
@@ -293,12 +311,16 @@
             </ul>
           </li>
           <li class="member">
-            <img
-              srcset="./image/mob/img_ui_design.jpg 1x, ./image/mob/img_ui_design@2x.jpg 2x, ./image/mob/img_ui_design@3x.jpg 3x"
-              src="./image/mob/img_ui_design.jpg"
-              alt="Фото Михаила Ермакова"
-              width="450"
-            />
+            <picture>
+              <source srcset="./image/mob/img_ui_design.jpg 1x, ./image/mob/img_ui_design@2x.jpg 2x, ./image/mob/img_ui_design@3x.jpg 3x" media="(max-width: 767px)"/>
+              <source srcset="./image/desktop/img_ui_design.jpg 1x, ./image/desktop/img_ui_design@2x.jpg 2x, ./image/desktop/img_ui_design@3x.jpg 3x" media="(min-width: 1200px)"/>
+              <source srcset="./image/mob/img_ui_design.jpg 1x, ./image/mob/img_ui_design@2x.jpg 2x, ./image/mob/img_ui_design@3x.jpg 3x" media="(max-width: 767px)"/>
+              <img
+                src="./image/mob/img_ui_design.jpg"
+                alt="Фото Михаила Ермакова"                
+              />
+            </picture> 
+            
             <h3 class="member_name">Михаил Ермаков</h3>
             <p lang="en" class="member_position">UI Designer</p>
             <ul class="social-net">
