@@ -5,7 +5,9 @@
     display: flex;
     align-items: center;
 }*/
-
+header {
+    position: relative;
+}
 .head-container {
     display: flex;
     align-items: center;
@@ -18,21 +20,31 @@
 
 }
 .menu {
-    @media screen and (max-width:$pre-tablet) {
-        display: none;
+    display: none;
 
-        position: absolute;
-        top:0;
-        left:0;
+
+
     
+    &.is-open {
+        display: block;
+    }
+    @media screen and (max-width:$pre-tablet) {  
+        position: absolute;
+        z-index: 999;
+        top:100%;
+        left:0;
+
         padding-top: 60px;
         padding-bottom: 60px;
     
-        width: 100vw;
+        width: 100%;
         
         text-align: center;
+
+        background-color: $first-color;
     
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
     }
     @media screen and (min-width:$tablet) {
         position: static;
@@ -45,10 +57,51 @@
     }
 }
 .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    margin-left: auto;
+
+    width: 40px;
+    height: 40px;
+
+
+    background-color: transparent;
+    border: none;
+
+    &_icon {
+        width: 24px;
+        height: 16px;
+    }
+
+    & .cross-icon {
+        display: none;
+    }
+    &.is-open .menu-icon {
+        display: none;
+    }
+    &.is-open .cross-icon {
+        display: block;
+    }
+    &.is-open  .menu-button_icon {
+        width: 18.67px;
+        height: 18.67px;
+    }
+  
     @media screen and (min-width:$tablet) {
         display: none;
     }
 }
+
+.menu-button:focus .menu-button_icon,
+.menu-button:hover .menu-button_icon {
+    fill: $accent-color;
+}
+
+
 .nav {
     @media screen and (min-width:$tablet) {
          display: flex;
@@ -125,6 +178,7 @@
     @media screen and (min-width:$desktop){
         
         display: flex;
+        align-items: center;
         flex-direction: row;
         margin: 0px 0px 0px auto
               

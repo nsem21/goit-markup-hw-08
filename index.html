@@ -20,7 +20,13 @@
         <a href="./index.html" class="logo"
           ><span class="logo_accent">Web</span>Studio</a
         >
-        <div class="menu">
+        <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
+          <svg class="menu-button_icon" aria-label="Кнопка мобильного меню">
+            <use href="./image/sprite.svg#icon-crossclose" class="cross-icon"></use>
+            <use href="./image/sprite.svg#icon-menu" class="menu-icon"></use>
+          </svg>
+        </button>
+        <div class="menu" aria-expanded="false" data-menu>
           <nav>
             <ul class="nav">
               <li class="nav_item">
@@ -53,12 +59,7 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="menu-button" data-modal-open>
-          <svg class="menu-button_icon">
-            <use href="./image/sprite.svg#icon-crossclose"></use>
-            <use href="./image/sprite.svg#icon-menu"></use>
-          </svg>
-        </button>
+        
       </div>
     </header>
     <section class="hero">
@@ -173,10 +174,10 @@
         <ul class="team">
           <li class="member">
             <img
-              src="./image/img_pr_designer.jpg"
+              srcset="./image/mob/img_pr_design.jpg 1x, ./image/mob/img_pr_design@2x.jpg 2x, ./image/mob/img_pr_design@3x.jpg 3x"
+              src="./image/mob/img_pr_design.jpg"
               alt="Фото Игоря Демьяненко"
-              width="270"
-              height="260"
+              width="450"
             />
             <h3 class="member_name">Игорь Демьяненко</h3>
             <p lang="en" class="member_position">Designer</p>
@@ -213,10 +214,10 @@
           </li>
           <li class="member"> 
             <img
-              src="./image/img_developer.jpg"
+              srcset="./image/mob/img_develop.jpg 1x, ./image/mob/img_develop@2x.jpg 2x, ./image/mob/img_develop@3x.jpg 3x"
+              src="./image/mob/img_develop.jpg"
               alt="Фото Ольги Репиной"
-              width="270"
-              height="260"
+              width="450"
             />
             <h3 class="member_name">Ольга Репина</h3>
             <p lang="en" class="member_position">Frontend Developer</p>
@@ -253,10 +254,10 @@
           </li>
           <li class="member">
             <img
-              src="./image/img_marketing.jpg"
+              srcset="./image/mob/img_market.jpg 1x, ./image/mob/img_market@2x.jpg 2x, ./image/mob/img_market@3x.jpg 3x"
+              src="./image/mob/img_market.jpg"
               alt="Фото Николая Тарасова"
-              width="270"
-              height="260"
+              width="450"
             />
             <h3 class="member_name">Николай Тарасов</h3>
             <p lang="en" class="member_position">Marketing</p>
@@ -293,10 +294,10 @@
           </li>
           <li class="member">
             <img
-              src="./image/img_ui_designer.jpg"
+              srcset="./image/mob/img_ui_design.jpg 1x, ./image/mob/img_ui_design@2x.jpg 2x, ./image/mob/img_ui_design@3x.jpg 3x"
+              src="./image/mob/img_ui_design.jpg"
               alt="Фото Михаила Ермакова"
-              width="270"
-              height="260"
+              width="450"
             />
             <h3 class="member_name">Михаил Ермаков</h3>
             <p lang="en" class="member_position">UI Designer</p>
@@ -574,5 +575,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

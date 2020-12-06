@@ -58,6 +58,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*Обнуление стилей списков*/
@@ -275,6 +277,10 @@ img {
     display: flex;
     align-items: center;
 }*/
+header {
+  position: relative;
+}
+
 .head-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,16 +296,25 @@ img {
   }
 }
 
+.menu {
+  display: none;
+}
+
+.menu.is-open {
+  display: block;
+}
+
 @media screen and (max-width: 767px) {
   .menu {
-    display: none;
     position: absolute;
-    top: 0;
+    z-index: 999;
+    top: 100%;
     left: 0;
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 100vw;
+    width: 100%;
     text-align: center;
+    background-color: #ffffff;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
@@ -323,10 +338,56 @@ img {
   }
 }
 
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-button_icon {
+  width: 24px;
+  height: 16px;
+}
+
+.menu-button .cross-icon {
+  display: none;
+}
+
+.menu-button.is-open .menu-icon {
+  display: none;
+}
+
+.menu-button.is-open .cross-icon {
+  display: block;
+}
+
+.menu-button.is-open .menu-button_icon {
+  width: 18.67px;
+  height: 18.67px;
+}
+
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button:focus .menu-button_icon,
+.menu-button:hover .menu-button_icon {
+  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -413,6 +474,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -531,6 +595,13 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  .banner_title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
 }
 
 @media screen and (min-width: 1200px) {
