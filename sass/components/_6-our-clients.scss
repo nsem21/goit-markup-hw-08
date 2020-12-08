@@ -1,6 +1,8 @@
 .client-base {
+    
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (min-width:$tablet) and (max-width:$pre-desktop) {
         margin-right: -30px;
@@ -12,6 +14,8 @@
     }
 }
 .client {
+
+    
     display: flex;
    
     justify-content: center;
@@ -25,14 +29,31 @@
   
     transition: $change-function;
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }   
+
+       
+    @media screen and (min-width:$mobile) and (max-width:$pre-tablet) {
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+        
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }   
+    }
+
     @media screen and (min-width:$tablet) and (max-width:$pre-desktop){
         width: 226px;
         margin-right: 30px;
         margin-bottom: 30px;
            
     }
+
     @media screen and (min-width:$desktop){
         width: 170px;
+        margin: 0;
     }
 
     
@@ -52,15 +73,7 @@
     }
 
 }
-@media screen and (max-width:$pre-tablet) {
-    .client:nth-child(2n+1) {
-        margin-right: 30px;
-    }
-    
-    .client:not(:nth-last-child(-n+2)) {
-        margin-bottom: 30px;
-    }   
-}
+
 
 
 .client_logo {
